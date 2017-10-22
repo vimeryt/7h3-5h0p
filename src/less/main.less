@@ -1,4 +1,5 @@
 @import 'media';
+@import (less) 'node_modules/normalize.css/normalize.css';
 //color
 @white: #fff;
 @black: #000;
@@ -18,38 +19,41 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 1600px;
-    padding: 0 100px;
+    max-width: 1400px;
+    padding: 0 15px;
     box-sizing: border-box;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        height: 87px;
+    }
 }
 
 .header {
-    display: flex;
-    height: 87px;
     &__block {
         width: 33%;
         margin: auto;
     }
-        &__block-oggetto {
-            text-align: center;
-        }
-        &__block-phone {
-            text-align: right;
-        }
-        &__logo-oggetto {
-            height: 50px;
-        }
-        &__logo-shop {
-            height: 24px;
-        }
-        &__logo-link{
-            display: inline-block;
-        }
-        &__text-phone {
-            color: @red;
-            font-weight: 700;
-            font-size: 24px;
-        }
+    &__block-oggetto {
+        text-align: center;
+    }
+    &__block-phone {
+        text-align: right;
+    }
+    &__logo-oggetto {
+        height: 50px;
+    }
+    &__logo-shop {
+        height: 24px;
+    }
+    &__logo-link{
+        display: inline-block;
+    }
+    &__text-phone {
+        color: @red;
+        font-weight: 700;
+        font-size: 24px;
+    }
 }
 
 .navigation {
@@ -61,7 +65,7 @@ body {
         display: inline-block;
     }
     &__items {
-        padding:0;
+        padding: 0;
     }
     &__item {
         margin-right: 20px;
@@ -139,7 +143,7 @@ body {
     &__size,
     &__color,
     &__buy {
-        margin-bottom: 35px;
+        margin-bottom: 30px;
     }
     &__name-text{
         margin:0;
@@ -166,9 +170,7 @@ body {
             height: 80px;
             width: 202px;
             cursor: pointer;
-            //:active {
-            //    border: none;
-            //}
+            outline: none;
         }
         &-text {
             color: @white;
@@ -195,7 +197,8 @@ body {
 }
 .size__items,
 .color__items {
-    padding:0;
+    padding: 0;
+    margin: 0;
 }
 .size__item,
 .color__item {
@@ -208,6 +211,7 @@ body {
     text-align: center;
     padding: 10px 0;
     box-sizing: border-box;
+    cursor: pointer;
         &-link {
             text-decoration: none;
             display: inline-block;
@@ -238,6 +242,7 @@ body {
     border-top: 1px solid darken(@beige, 20%);
     &__main {
         display: flex;
+        justify-content: space-between;
     }
     &__section {
         margin-top: 65px;

@@ -6,14 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
 <body>
-<div class="container">
 <header class="header">
-        <div class="header__block header__block-shop">
+    <div class="container container__header">
+    <div class="header__block header__block-shop">
             <a class='header__logo-link' href="#">
                 <img class="header__logo-shop" src="img/the_shop_logo.svg" alt="logo-shop">
             </a>
@@ -26,11 +25,13 @@
         <div class="header__block header__block-phone">
             <a href="tel:+7(812)2128506" class="header__text-phone">+7 (812) 2•12•85•06</a>
         </div>
+    </div>
 </header>
-</div>
 
-<div class="navigation container">
-        <ul class="navigation__items">
+<div class="navigation">
+    <div class="container">
+
+    <ul class="navigation__items">
             <li class="navigation__item">
                 <a href="#" class="navigation__text navigation__text_active">LISP</a>
             </li>
@@ -48,6 +49,7 @@
             </li>
         </ul>
         <input type="text" class="navigation__search">
+</div>
 </div>
 
 <div class="product container">
@@ -85,21 +87,15 @@
             <span class="product__size-text">Размер:</span>
             <div class="size__wrap">
                 <ul class="size__items">
-                    <a class="size__item-link" href="#">
-                        <li class="size__item">
-                            <span class="size__item-text">S</span>
-                        </li>
-                    </a>
-                    <a class="size__item-link" href="#">
-                        <li class="size__item size__item_active">
-                            <span class="size__item-text">M</span>
-                        </li>
-                    </a>
-                    <a class="size__item-link" href="#">
-                        <li class="size__item">
-                            <span class="size__item-text">L</span>
-                        </li>
-                    </a>
+                    <li class="size__item">
+                        <span class="size__item-text">S</span>
+                    </li>
+                    <li class="size__item size__item_active">
+                        <span class="size__item-text">M</span>
+                    </li>
+                    <li class="size__item">
+                        <span class="size__item-text">L</span>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -107,15 +103,9 @@
             <span class="product__color-text">Цвет:</span>
             <div class="color__wrap">
                 <ul class="color__items">
-                    <a class="color__item-link" href="#">
-                        <li class="color__item color__item_active"></li>
-                    </a>
-                    <a class="color__item-link" href="#">
-                        <li class="color__item color__item-yellow"></li>
-                    </a>
-                    <a class="color__item-link" href="#">
-                        <li class="color__item color__item-gray"></li>
-                    </a>
+                    <li class="color__item color__item_active"></li>
+                    <li class="color__item color__item-yellow"></li>
+                    <li class="color__item color__item-gray"></li>
                 </ul>
             </div>
         </div>
@@ -136,7 +126,9 @@
     </div>
 </div>
 
-<footer class="footer container">
+<footer class="footer">
+    <div class="container">
+
     <div class="footer__main">
         <div class="footer__section footer__service">
             <h4 class="footer__caption">Сервис и поддержка</h4>
@@ -268,6 +260,7 @@
     <div class="footer__cellar">
         <p class="footer__text">2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.</p>
         <p class="footer__text">Все права защищены. Доставка по всей России!</p>
+    </div>
     </div>
 </footer>
 <script src="js/scripts.js"></script>
