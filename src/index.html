@@ -71,7 +71,9 @@
 
     <div class="product__wrap">
     <div class="product__photo">
-        <img class="product__img" src="img/tshirts/tshirt_white.jpg" alt="tshirt-photo">
+        <img class="product__img product__img_active" src="img/tshirts/tshirt_white.jpg" id="tshirtWhite" alt="tshirt-photo">
+        <img class="product__img" src="img/tshirts/tshirt_green.jpg" id="tshirtGreen" alt="tshirt-photo">
+        <img class="product__img" src="img/tshirts/tshirt_yellow.jpg" id="tshirtYellow" alt="tshirt-photo">
     </div>
     <div class="product__info">
         <div class="product__name">
@@ -87,15 +89,9 @@
             <span class="product__size-text">Размер:</span>
             <div class="size__wrap">
                 <ul class="size__items">
-                    <li class="size__item">
-                        <span class="size__item-text">S</span>
-                    </li>
-                    <li class="size__item size__item_active">
-                        <span class="size__item-text">M</span>
-                    </li>
-                    <li class="size__item">
-                        <span class="size__item-text">L</span>
-                    </li>
+                    <li class="size__item size__item-text">S</li>
+                    <li class="size__item size__item-text size__item_active">M</li>
+                    <li class="size__item size__item-text">L</li>
                 </ul>
             </div>
         </div>
@@ -103,9 +99,9 @@
             <span class="product__color-text">Цвет:</span>
             <div class="color__wrap">
                 <ul class="color__items">
-                    <li class="color__item color__item_active"></li>
-                    <li class="color__item color__item-yellow"></li>
-                    <li class="color__item color__item-gray"></li>
+                    <li class="color__item color__item_active" data-color="tshirtWhite"></li>
+                    <li class="color__item color__item-yellow" data-color="tshirtYellow"></li>
+                    <li class="color__item color__item-gray" data-color="tshirtGreen"></li>
                 </ul>
             </div>
         </div>
