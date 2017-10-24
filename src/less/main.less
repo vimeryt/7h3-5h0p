@@ -162,6 +162,9 @@ body {
     @media @tablet {
         margin-bottom: 80px;
     }
+    @media @phone {
+        margin-bottom: 30px;
+    }
     &__way {
         margin-top: 50px;
         margin-bottom: 20px;
@@ -208,7 +211,7 @@ body {
             padding-left: 50px;
         }
         @media @phone {
-            padding-left: 30px;
+            padding-left: 10px;
         }
     }
     &__name,
@@ -216,6 +219,9 @@ body {
     &__color-text {
         display: block;
         margin-bottom: 15px;
+        @media @phone {
+            margin-bottom: 5px;
+        }
     }
     &__description,
     &__price,
@@ -225,6 +231,9 @@ body {
         margin-bottom: 30px;
         @media @tablet {
             margin-bottom: 15px;
+        }
+        @media @phone {
+            margin-bottom: 5px;
         }
     }
     &__name-text{
@@ -238,12 +247,18 @@ body {
         @media @tablet {
             font-size: 24px;
         }
+        @media @phone {
+            font-size: 14px;
+        }
     }
     &__description-text,
     &__size-text,
     &__color-text,
     &__hold-text {
         font-size: 16px;
+        @media @phone {
+            font-size: 10px;
+        }
     }
     &__price-text {
         color: @red;
@@ -259,6 +274,10 @@ body {
             @media @tablet {
                 height: 50px;
                 width: 178px;
+            }
+            @media @phone {
+                height: 30px;
+                width: 122px;
             }
         }
         &-text {
@@ -276,12 +295,19 @@ body {
                 height: 20px;
                 margin-right: 10px;
             }
+            @media @phone {
+                height: 10px;
+                margin-right: 5px;
+            }
         }
         &-link {
             color: @gray;
         }
         &-wrap {
             margin: auto 0;
+            @media @phone {
+                margin: -6px 0;
+            }
         }
     }
 }
@@ -293,6 +319,7 @@ body {
 .color__items {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 .size__item,
 .color__item {
@@ -304,18 +331,22 @@ body {
     margin-right: 10px;
     text-align: center;
     padding: 10px 0;
-    box-sizing: border-box;
     cursor: pointer;
+    font-size: 36px;
+    box-sizing: border-box;
+    color: @black;
     @media @tablet {
         width: 50px;
         height: 50px;
-    }
-}
-.size__item-text {
-    font-size: 36px;
-    color: @black;
-    @media @tablet {
         font-size: 24px;
+        padding: 8px 0;
+    }
+    @media @phone {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        font-size: 10px;
+        padding: 3px 0;
     }
 }
 
@@ -326,6 +357,10 @@ body {
     padding: 8px 0;
     @media @tablet {
         border: 2px solid @red;
+    }
+    @media @phone {
+        border: 1px solid @red;
+        padding: 3px 0;
     }
 }
 .color__item {
@@ -346,10 +381,16 @@ body {
     }
     &__section {
         margin-top: 65px;
+        @media @phone {
+            margin-top: 30px;
+        }
     }
     &__service {
         @media @tablet {
             margin-right: 40px;
+        }
+        @media @phone {
+            margin-right: 20px;
         }
     }
     &__caption {
@@ -359,11 +400,25 @@ body {
         @media @tablet {
             margin-bottom: 15px;
         }
+        @media @phone {
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
     }
 
     &__social {
         width: 10%;
         text-align: right;
+        & img {
+            @media @phone {
+                width: 10px;
+                height: 10px;
+            }
+        }
+        @media @phone {
+            width: 10px;
+            height: 10px;
+        }
     }
     &__cellar {
         display: block;
@@ -375,11 +430,18 @@ body {
             margin-top: 40px;
             padding-bottom: 25px;
         }
+        @media @phone {
+            margin-top: 15px;
+            padding: 10px 0;
+        }
     }
     &__text {
         margin: 0;
         font-size: 14px;
         line-height: 2;
+        @media @phone {
+            font-size: 10px;
+        }
     }
 }
 
@@ -398,14 +460,23 @@ body {
             @media @desktop {
                 margin-right: 50px;
             }
+            @media @phone {
+                margin-right: 20px;
+            }
         }
         &-service_primary li {
             margin-right: 55px;
+            @media @phone {
+                margin-right: 35px;
+            }
         }
     }
     &__item {
         list-style-type: none;
         font-size: 14px;
+        @media @phone {
+            font-size: 10px;
+        }
         &-link {
             text-decoration: none;
             color: @black;
@@ -416,9 +487,15 @@ body {
         &-social,
         &-advantages {
             margin-bottom: 25px;
+            @media @phone {
+                margin-bottom: 10px;
+            }
         }
         &-advantages {
             display: flex;
+            @media @phone {
+                display: none;
+            }
             &-img{
                 margin-right: 15px;
                 &_heart {
