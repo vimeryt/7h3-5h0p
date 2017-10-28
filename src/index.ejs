@@ -60,6 +60,50 @@
         </ul>
     </div>
     <!--END PRODUCT-WAY-->
+    <!--START PRODUCT-->
+    <div class='product__wrap'>
+        <!--START PRODUCT PHOTO-->
+        <div class='product__photo'>
+            <% const color = ['white', 'green', 'yellow'];
+            color.forEach(function (item){ %>
+            <img src='img/tshirts/tshirt_<%=item%>.jpg' alt='tshirt-photo' id='<%=item%>' class='product__img <%if (item == 'white') {%>product__img_active<%}%>'>
+            <% }) %>
+        </div>
+        <!--START PRODUCT DESCRIPTION-->
+        <div class='product__info'>
+            <div class='product__name'>
+                <h2 class='product__name-text'>Футболка Alien technology</h2>
+            </div>
+            <div class='product__description'>
+                <span class='product__description-text'>Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</span>
+            </div>
+            <div class='product__price'>
+                <span class='product__price-text'>1500₽</span>
+            </div>
+            <div class='product__size'>
+                <span class='product__size-text'>Размер:</span>
+                <div class='size__wrap'>
+                    <% const size = ['S', 'M', 'L'] %>
+                    <ul class='size__items'>
+                        <% size.forEach(function (item) { %>
+                            <li class='size__item'><%=item %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            <div class='product__color'>
+                <span class='product__color-text'>Цвет:</span>
+                <div class='color__wrap'>
+                    <ul class='color__items'>
+                        <% color.forEach(function (item) { %>
+                        <li class='color__item color__item-<%=item%>' data-color='<%=item%>'></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--END PRODUCT DESCRIPTION-->
+    </div>
 </div>
 <!--END CONTENT-->
 <!--START FOOTER-->

@@ -27,4 +27,102 @@
     &__link {
         color: @red;
     }
+
+    &__wrap {
+        display: flex;
+    }
+
+    &__photo {
+        width: 50%;
+    }
+
+    &__img {
+        width: 100%;
+        display: none;
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &__info {
+        width: 50%;
+        padding-left: 65px;
+        box-sizing: border-box;
+    }
+
+    &__name,
+    &__size-text,
+    &__color-text {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    &__description,
+    &__price,
+    &__size,
+    &__color,
+    &__buy {
+        margin-bottom: 30px;
+    }
+
+    &__name-text {
+        margin: 0;
+    }
+
+    &__name-text,
+    &__price-text,
+    &__buy-text {
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    &__price-text {
+        color: @red;
+    }
+}
+
+.size__wrap,
+.color__wrap {
+    display: flex;
+}
+
+.size__items,
+.color__items {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.size__item,
+.color__item {
+    text-decoration: none;
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    border: 1px solid @black;
+    margin-right: 10px;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 36px;
+    box-sizing: border-box;
+    color: @black;
+}
+
+.size__item_active,
+.color__item_active {
+    cursor: default;
+    border: 3px solid @red;
+    padding: 8px 0;
+}
+
+.color__item {
+    &-yellow {
+        background: @yellowshirt;
+    }
+
+    &-green {
+        background: @greenshirt;
+    }
 }
