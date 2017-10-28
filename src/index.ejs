@@ -86,7 +86,7 @@
                     <% const size = ['S', 'M', 'L'] %>
                     <ul class='size__items'>
                         <% size.forEach(function (item) { %>
-                            <li class='size__item'><%=item %></li>
+                            <li class='size__item <%if (item == 'M') {%>size__item_active<%}%>'><%=item %></li>
                         <% }) %>
                     </ul>
                 </div>
@@ -96,13 +96,28 @@
                 <div class='color__wrap'>
                     <ul class='color__items'>
                         <% color.forEach(function (item) { %>
-                        <li class='color__item color__item-<%=item%>' data-color='<%=item%>'></li>
+                        <li class='color__item color__item-<%=item%> <%if (item == 'white') {%>color__item_active<%}%>' data-color='<%=item%>'></li>
                         <% }) %>
                     </ul>
                 </div>
             </div>
-        </div>
         <!--END PRODUCT DESCRIPTION-->
+        <!--START PRODUCT ACTIONS-->
+        <div class="product__buy">
+            <button class="product__buy-btn">
+                <span class="product__buy-text">Купить</span>
+            </button>
+        </div>
+        <div class="product__hold">
+                <img class="product__hold-img" src="img/icons/heart.png" alt="heart">
+            <div class="product__hold-wrap">
+                <a href="#" class="product__hold-link">
+                    <span class="product__hold-text">Отложить на потом</span>
+                </a>
+            </div>
+        </div>
+        </div>
+        <!--END PRODUCT ACTIONS-->
     </div>
 </div>
 <!--END CONTENT-->
