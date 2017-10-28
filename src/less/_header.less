@@ -1,0 +1,84 @@
+@import (less) '_variables.less';
+
+.container__header {
+    height: 88px;
+    display: flex;
+}
+
+.header {
+    &__block {
+        width: 33%;
+        margin: auto;
+    }
+
+    &__img-shop {
+        height: 24px;
+    }
+
+    &__img-oggetto {
+        height: 50px;
+    }
+
+    &__logo-oggetto {
+        text-align: center;
+    }
+
+    &__block-phone {
+        text-align: right;
+    }
+
+    &__text-phone {
+        text-decoration: none;
+        color: @red;
+        font-weight: 700;
+        font-size: 24px;
+    }
+}
+
+.container__navigation {
+    height: 50px;
+    background-color: @beige;
+    border-top: 1px solid @darkbeige;
+    border-bottom: 1px solid @darkbeige;
+}
+
+.navigation {
+    display: inline-block;
+
+    &__items {
+        margin: 16px 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+        margin-right: 20px;
+
+        &:first-child a {
+            color: @black;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    }
+
+    &__link {
+        color: @red;
+    }
+
+    &__search {
+        float: right;
+        margin: 7px 0;
+        height: 36px;
+        width: 278px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        background-color: @white;
+        background-image: url('../img/icons/search.svg');
+        background-position: right 10px center;
+        background-repeat: no-repeat;
+        background-size: 15px;
+        border: 1px solid @darkbeige;
+        padding: 0 30px 0 10px;
+    }
+}

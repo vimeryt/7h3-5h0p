@@ -1,6 +1,23 @@
-@import (less) '~normalize.css/normalize.css';
+@import (less) '../../node_modules/normalize.css/normalize.css';
+@import (less) '_variables.less';
 @import (less) '_media.less';
+@import (less) '_header.less';
+@import (less) '_content.less';
 
+body {
+    background: @white;
+    font-family: @roboto;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    @media @phone {
+        padding: 0 5px;
+    }
+}
 // Код для примера
 //body {
 //    background: #ccc;
