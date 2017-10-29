@@ -6,10 +6,16 @@
     &__way {
         margin-top: 50px;
         margin-bottom: 20px;
+
+        @media @tablet {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
     }
 
     &__items {
         padding: 0;
+        margin: 0;
         list-style: none;
     }
 
@@ -49,6 +55,10 @@
         width: 50%;
         padding-left: 65px;
         box-sizing: border-box;
+
+        @media @tablet {
+            padding-left: 45px;
+        }
     }
 
     &__name,
@@ -64,6 +74,10 @@
     &__color,
     &__buy {
         margin-bottom: 30px;
+
+        @media @tablet {
+            margin-bottom: 15px;
+        }
     }
 
     &__name-text {
@@ -75,10 +89,26 @@
     &__buy-text {
         font-weight: 700;
         font-size: 36px;
+
+        @media @tablet {
+            font-size: 22px;
+        }
     }
 
     &__price-text {
         color: @red;
+    }
+
+    &__description-text,
+    &__hold-text {
+        @media @tablet {
+            font-size: 12px;
+        }
+    }
+
+    &__size-text,
+    &__color-text {
+        display: none;
     }
 
     &__buy {
@@ -89,6 +119,11 @@
             width: 202px;
             cursor: pointer;
             outline: none;
+
+            @media @tablet {
+                height: 50px;
+                width: 180px;
+            }
         }
 
         &-text {
@@ -104,6 +139,10 @@
         &-img {
             height: 25px;
             margin-right: 7px;
+
+            @media @tablet {
+                height: 20px;
+            }
         }
 
         &-link {
@@ -147,6 +186,17 @@
         cursor: default;
         border: 3px solid @red;
         padding: 8px 0;
+
+        @media @tablet {
+            border: 2px solid @red;
+            padding: 9px 0;
+        }
+    }
+
+    @media @tablet {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
     }
 }
 

@@ -3,6 +3,10 @@
 .container__header {
     height: 88px;
     display: flex;
+
+    @media @tablet {
+        height: 70px;
+    }
 }
 
 .header {
@@ -11,12 +15,24 @@
         margin: auto;
     }
 
+    &__link {
+        display: inline-block;
+    }
+
     &__img-shop {
         height: 24px;
     }
 
     &__img-oggetto {
         height: 50px;
+    }
+
+    &__logo-shop {
+        margin-top: 35px;
+
+        @media @tablet {
+            margin-top: 25px;
+        }
     }
 
     &__logo-oggetto {
@@ -32,6 +48,9 @@
         color: @red;
         font-weight: 700;
         font-size: 24px;
+        @media @tablet {
+            font-size: 20px;
+        }
     }
 }
 
@@ -80,5 +99,9 @@
         background-size: 15px;
         border: 1px solid @darkbeige;
         padding: 0 30px 0 10px;
+
+        @media @tablet {
+            width: 215px;
+        }
     }
 }

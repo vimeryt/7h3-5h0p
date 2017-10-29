@@ -3,6 +3,7 @@
 @import (less) '_media.less';
 @import (less) '_header.less';
 @import (less) '_content.less';
+@import (less) '_footer.less';
 
 body {
     background: @white;
@@ -18,43 +19,3 @@ body {
         padding: 0 5px;
     }
 }
-// Код для примера
-//body {
-//    background: #ccc;
-//}
-//
-//.menu {
-//    margin: 0;
-//    padding: 0;
-//    text-align: center;
-//    background: red;
-//
-//    // Стили для всех девайсов пишутся внитри блока:
-//    @media @tablet {
-//        background: green;
-//    }
-//
-//    @media @desktop {
-//        background: blue;
-//    }
-//
-//    // Пример стилей для элемента `.menu__item`
-//    &__item {
-//        display: inline-block;
-//        list-style-type: none;
-//    }
-//
-//    &__link {
-//        color: #FFF;
-//    }
-//
-//    // Пример модификатора `.menu_bottom`
-//    &_bottom {
-//        background: green;
-//    }
-//
-//    // Пример переопределения стилей элемента в нижнем меню `.menu_bottom .menu__item`
-//    &_bottom &__item {
-//        color: #f00;
-//    }
-//}
