@@ -28,11 +28,15 @@
 //existing variables
 @md-max: 992px;
 @sm-max: 768px;
-@xs-max: 350px;
+@s-max: 610px;
+@xs-max: 420px;
+@xxs-max: 350px;
 
 @desktop: ~'only screen and (max-width: @{md-max})';
 @tablet: ~'only screen and (max-width: @{sm-max})';
-@phone: ~'only screen and (max-width: @{xs-max})';
+@phone-landscape: ~'only screen and (max-width: @{s-max})';
+@phone-portrait: ~'only screen and (max-width: @{xs-max})';
+@phone: ~'only screen and (max-width: @{xxs-max})';
 
 // Это служебный файл, никакие стили тут писать не нужно.
 // Задача этого файла — объявить переменные для медиа-запросов.
