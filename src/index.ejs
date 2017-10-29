@@ -39,7 +39,9 @@
                     <% }); %>
                 </ul>
             </nav>
-            <input type='text' class='navigation__search'>
+            <form class='navigation__form-search' action=''>
+                <input type='text' class='navigation__search'>
+            </form>
         </div>
     </div>
     <!--END HEADER NAVIGATION-->
@@ -83,34 +85,36 @@
             <div class='product__price'>
                 <span class='product__price-text'>1500₽</span>
             </div>
-            <div class='product__size'>
-                <span class='product__size-text'>Размер:</span>
-                <div class='size__wrap'>
-                    <% const size = ['S', 'M', 'L'] %>
-                    <ul class='size__items'>
-                        <% size.forEach(function (item) { %>
-                            <li class='size__item <%if (item == 'M') {%>size__item_active<%}%>'><%=item %></li>
-                        <% }) %>
-                    </ul>
+            <form action='' class='product__form'>
+                <div class='product__size'>
+                    <span class='product__size-text'>Размер:</span>
+                    <div class='size__wrap'>
+                        <% const size = ['S', 'M', 'L'] %>
+                        <ul class='size__items'>
+                            <% size.forEach(function (item) { %>
+                                <li class='size__item <%if (item == 'M') {%>size__item_active<%}%>'><%=item %></li>
+                            <% }) %>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class='product__color'>
-                <span class='product__color-text'>Цвет:</span>
-                <div class='color__wrap'>
-                    <ul class='color__items'>
-                        <% color.forEach(function (item) { %>
-                        <li class='color__item color__item-<%=item%> <%if (item == 'white') {%>color__item_active<%}%>' data-color='<%=item%>'></li>
-                        <% }) %>
-                    </ul>
+                <div class='product__color'>
+                    <span class='product__color-text'>Цвет:</span>
+                    <div class='color__wrap'>
+                        <ul class='color__items'>
+                            <% color.forEach(function (item) { %>
+                            <li class='color__item color__item-<%=item%> <%if (item == 'white') {%>color__item_active<%}%>' data-color='<%=item%>'></li>
+                            <% }) %>
+                        </ul>
+                    </div>
                 </div>
+            <!--END PRODUCT DESCRIPTION-->
+            <!--START PRODUCT ACTIONS-->
+            <div class='product__buy'>
+                <button class='product__buy-btn'>
+                    <span class='product__buy-text'>Купить</span>
+                </button>
             </div>
-        <!--END PRODUCT DESCRIPTION-->
-        <!--START PRODUCT ACTIONS-->
-        <div class='product__buy'>
-            <button class='product__buy-btn'>
-                <span class='product__buy-text'>Купить</span>
-            </button>
-        </div>
+        </form>
         <div class='product__hold'>
                 <img class='product__hold-img' src='img/icons/heart.png' alt='heart'>
             <div class='product__hold-wrap'>
@@ -126,8 +130,28 @@
 </div>
 <!--END CONTENT-->
 <!--START FOOTER-->
-<footer class='footer'>
-</footer>
+<!--<footer class='footer container__footer'>-->
+    <!--<div class='container'>-->
+        <!--<div class='footer__content'>-->
+            <!--<div class='footer__content-block footer__content-block__service'>-->
+
+            <!--</div>-->
+            <!--<div class='footer__content-block footer__content-block__company'>-->
+
+            <!--</div>-->
+            <!--<div class='footer__content-block footer__content-block__advantages'>-->
+
+            <!--</div>-->
+            <!--<div class='footer__content-block footer__content-block__social'>-->
+
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class='footer__cellar'>-->
+            <!--<p class='footer__cellar-text'>2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.</p>-->
+            <!--<p class='footer__cellar-text'>Все права защищены. Доставка по всей России!</p>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</footer>-->
 <!--END FOOTER-->
 <script src="js/scripts.js"></script>
 </body>
