@@ -34,7 +34,7 @@
                 <ul class='navigation__items'>
                     <% navigation.forEach(function(item) { %>
                     <li class='navigation__item'>
-                        <a href='#' class='navigation__link'><%= item %></a>
+                        <a href='#' class='navigation__link <%if (item == 'LISP') {%>navigation__link_active<%}%>'><%= item %></a>
                     </li>
                     <% }); %>
                 </ul>
@@ -53,8 +53,8 @@
         <ul class='product__items'>
             <% way.forEach(function(item, index) { %>
             <li class='product__item'>
-                <a href='#' class='product__link'><%= item %></a>
-                <% if (index !== way.length - 1 ) { %>
+                <a href='#' class='product__link <%if (index == way.length - 1) {%>product__link_active<%}%>'><%= item %></a>
+                <% if (index !== way.length - 1) { %>
                 /
                 <% } %>
             </li>

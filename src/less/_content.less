@@ -38,16 +38,16 @@
     &__item {
         display: inline-block;
         text-decoration: none;
-
-        &:last-child a {
-            text-decoration: none;
-            color: @black;
-            cursor: default;
-        }
     }
 
     &__link {
         color: @red;
+
+        &_active {
+            text-decoration: none;
+            color: @black;
+            cursor: default;
+        }
     }
 
     &__wrap {
