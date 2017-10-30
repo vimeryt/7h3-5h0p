@@ -2,8 +2,7 @@
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
-    <meta name='viewport'
-          content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <title>Document</title>
     <link rel='stylesheet' href='css/main.css'>
@@ -39,7 +38,7 @@
                     <% }); %>
                 </ul>
             </nav>
-            <form class='navigation__form-search' action=''>
+            <form class='navigation__form-search' action='#'>
                 <input type='text' class='navigation__search'>
             </form>
         </div>
@@ -85,7 +84,7 @@
             <div class='product__price'>
                 <span class='product__price-text'>1500₽</span>
             </div>
-            <form action='' class='product__form'>
+            <form action='#' class='product__form'>
                 <div class='product__size'>
                     <span class='product__size-text'>Размер:</span>
                     <div class='size__wrap'>
@@ -130,29 +129,101 @@
 </div>
 <!--END CONTENT-->
 <!--START FOOTER-->
-<!--<footer class='footer container__footer'>-->
-    <!--<div class='container'>-->
-        <!--<div class='footer__content'>-->
-            <!--<div class='footer__content-block footer__content-block__service'>-->
+<footer class='footer container__footer'>
+    <% const service = {
+                title: 'Сервис и поддержка',
+                menus: {
+                    menu1: [
+                        'Как сделать заказ',
+                        'Возврат товара',
+                        'Публичная оферта',
+                        'Доставка'
+                    ],
+                    menu2: [
+                        'Способы оплаты',
+                        'Правила продажи',
+                        'Возврат денежных средств',
+                        'Вопросы и ответы'
+                    ]
+                }
+            }
+    %>
+    <% const about = {
+                title: 'О компании',
+                menus: {
+                    menu1: [
+                        'О нас',
+                        'Контакты',
+                        'Вакансии',
+                        'Партнерам'
+                    ],
+                    menu2: [
+                        'Сертификаты',
+                        'Преимущества',
+                        'Наши скидки'
+                    ]
+                }
+            }
+    %>
+    <div class='container'>
+        <div class='footer__content'>
+           <div class='footer__section footer__section_left'>
+               <div class='footer__content-block footer__menu-block'>
+                   <h4 class='footer__title'><%= service.title %></h4>
+                   <div class='footer__menu-wrapper'>
+                       <% Object.keys(service.menus).map(function(menu) { %>
+                       <ul class='footer__menu'>
+                           <% service.menus[menu].forEach(function (menuItem) { %>
+                           <li class='footer__menu-item'><a class='footer__menu-link' href='#'><%= menuItem %></a></li>
+                           <% }) %>
+                       </ul>
+                       <% }) %>
+                   </div>
+               </div>
+               <div class='footer__content-block footer__menu-block'>
+                   <h4 class='footer__title'><%= about.title %></h4>
 
-            <!--</div>-->
-            <!--<div class='footer__content-block footer__content-block__company'>-->
-
-            <!--</div>-->
-            <!--<div class='footer__content-block footer__content-block__advantages'>-->
-
-            <!--</div>-->
-            <!--<div class='footer__content-block footer__content-block__social'>-->
-
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class='footer__cellar'>-->
-            <!--<p class='footer__cellar-text'>2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.</p>-->
-            <!--<p class='footer__cellar-text'>Все права защищены. Доставка по всей России!</p>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</footer>-->
+                   <div class='footer__menu-wrapper'>
+                       <% Object.keys(about.menus).map(function(menu) { %>
+                       <ul class='footer__menu'>
+                           <% about.menus[menu].forEach(function (menuItem) { %>
+                           <li class='footer__menu-item'><a class='footer__menu-link' href='#'><%= menuItem %></a></li>
+                           <% }) %>
+                       </ul>
+                       <% }) %>
+                   </div>
+               </div>
+           </div>
+           <div class='footer__section footer__section_right'>
+                <div class='footer__content-block'>
+                    <%const features = {
+                        delivery: 'бесплатная доставка от 4000 ₽',
+                        heart: 'пробники в подарок при каждой покупке',
+                        cup: 'акции и подарки за покупку'
+                    }%>
+                    <ul class='footer__features'>
+                        <% Object.keys(features).map(function (key) {%>
+                        <li class='footer__features-item footer__features-item_<%= key%>'><%= features[key]%></li>
+                        <%})%>
+                    </ul>
+                </div>
+                <div class='footer__content-block footer__content-block__social'>
+                    <% const social = ['facebook', 'twitter', 'instagram']
+                    social.forEach(function(item) { %>
+                    <a href='#' class='footer__social-item'>
+                        <img src='img/icons/<%= item%>.svg' class='footer__social-img'>
+                    </a>
+                    <%})%>
+                </div>
+            </div>
+        </div>
+        <div class='footer__cellar'>
+            <p class='footer__cellar-text'>2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.</p>
+            <p class='footer__cellar-text'>Все права защищены. Доставка по всей России!</p>
+        </div>
+    </div>
+</footer>
 <!--END FOOTER-->
-<script src="js/scripts.js"></script>
+<script src='js/scripts.js'></script>
 </body>
 </html>

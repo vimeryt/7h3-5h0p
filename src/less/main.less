@@ -10,7 +10,17 @@ body {
     font-family: @roboto;
 }
 
+.clearfix {
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
 .container {
+    .clearfix;
     margin: 0 auto;
     max-width: 1400px;
     padding: 0 15px;
