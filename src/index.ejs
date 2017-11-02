@@ -10,23 +10,25 @@
 <body>
 <!--START HEADER-->
 <header class='header'>
-    <div class='container container__header'>
-        <div class='header__block header__logo-shop'>
-            <a href='#' class='header__link'>
-                <img class='header__img-shop' src='img/the_shop_logo.svg' alt='the_shop_logo'>
-            </a>
-        </div>
-        <div class='header__block header__logo-oggetto'>
-            <a href='#' class='header__link'>
-                <img class='header__img-oggetto' src='img/oggetto_logo.svg' alt='oggetto_logo'>
-            </a>
-        </div>
-        <div class='header__block header__block-phone'>
-            <a href="tel:+7(812)2128506" class='header__link header__text-phone'>+7 (812) 2•12•85•06</a>
+    <div class='container'>
+        <div class='header-wrap'>
+            <div class='header__block logo-shop'>
+                <a href='#' class='logo-shop__link'>
+                    <img class='logo-shop__img' src='img/the_shop_logo.svg' alt='the_shop_logo'>
+                </a>
+            </div>
+            <div class='header__block logo-oggetto'>
+                <a href='#' class='logo-oggetto__link'>
+                    <img class='logo-oggetto__img' src='img/oggetto_logo.svg' alt='oggetto_logo'>
+                </a>
+            </div>
+            <div class='header__block block-phone'>
+                <a href="tel:+7(812)2128506" class='block-phone__text'>+7 (812) 2•12•85•06</a>
+            </div>
         </div>
     </div>
     <!--START HEADER NAVIGATION-->
-    <div class='container__navigation'>
+    <div class='navigation-wrap'>
         <div class='container'>
             <% const navigation = ['LISP', 'OCaml', 'JavaScript', 'Python', 'PHP'] %>
             <nav class='navigation'>
@@ -38,8 +40,8 @@
                     <% }); %>
                 </ul>
             </nav>
-            <form class='navigation__form-search' action='#'>
-                <input type='text' class='navigation__search'>
+            <form class='form-search' action='#'>
+                <input type='text' class='form-search__input'>
             </form>
         </div>
     </div>
