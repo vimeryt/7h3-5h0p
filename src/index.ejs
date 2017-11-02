@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Document</title>
+    <link rel='stylesheet' href='css/main.css'>
+</head>
+<body>
+<!--START HEADER-->
+<header class='header'>
+    <div class='container container__header'>
+        <div class='header__block header__logo-shop'>
+            <a href='#' class='header__link'>
+                <img class='header__img-shop' src='img/the_shop_logo.svg' alt='the_shop_logo'>
+            </a>
+        </div>
+        <div class='header__block header__logo-oggetto'>
+            <a href='#' class='header__link'>
+                <img class='header__img-oggetto' src='img/oggetto_logo.svg' alt='oggetto_logo'>
+            </a>
+        </div>
+        <div class='header__block header__block-phone'>
+            <a href="tel:+7(812)2128506" class='header__link header__text-phone'>+7 (812) 2•12•85•06</a>
+        </div>
+    </div>
+    <!--START HEADER NAVIGATION-->
+    <div class='container__navigation'>
+        <div class='container'>
+            <% const navigation = ['LISP', 'OCaml', 'JavaScript', 'Python', 'PHP'] %>
+            <nav class='navigation'>
+                <ul class='navigation__items'>
+                    <% navigation.forEach(function(item) { %>
+                    <li class='navigation__item'>
+                        <a href='#' class='navigation__link <%if (item == 'LISP') {%>navigation__link_active<%}%>'><%= item %></a>
+                    </li>
+                    <% }); %>
+                </ul>
+            </nav>
+            <form class='navigation__form-search' action='#'>
+                <input type='text' class='navigation__search'>
+            </form>
+        </div>
+    </div>
+    <!--END HEADER NAVIGATION-->
+</header>
+<!--END HEADER-->
+<!--START CONTENT-->
+<div class='product container'>
+    <!--START PRODUCT-WAY-->
+    <div class='product__way'>
+        <% const way = ['LISP', 'Одежда', 'Футболки'] %>
+        <ul class='product__items'>
+            <% way.forEach(function(item, index) { %>
+            <li class='product__item'>
+                <a href='#' class='product__link <%if (index == way.length - 1) {%>product__link_active<%}%>'><%= item %></a>
+                <% if (index !== way.length - 1) { %>
+                /
+                <% } %>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+    <!--END PRODUCT-WAY-->
+    <!--START PRODUCT-->
+    <div class='product__wrap'>
+        <!--START PRODUCT PHOTO-->
+        <div class='product__photo'>
+            <% const color = ['white', 'green', 'yellow'];
+            color.forEach(function (item){ %>
+            <img src='img/tshirts/tshirt_<%=item%>.jpg' alt='tshirt-photo' id='<%=item%>' class='product__img <%if (item == 'white') {%>product__img_active<%}%>'>
+            <% }) %>
+        </div>
+        <!--END PRODUCT PHOTO-->
+        <!--START PRODUCT DESCRIPTION-->
+        <div class='product__info'>
+            <div class='product__name'>
+                <h2 class='product__name-text'>Футболка Alien technology</h2>
+            </div>
+            <div class='product__description'>
+                <span class='product__description-text'>Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</span>
+            </div>
+            <div class='product__price'>
+                <span class='product__price-text'>1500₽</span>
+            </div>
+            <form action='#' class='product__form'>
+                <div class='product__size'>
+                    <span class='product__size-text'>Размер:</span>
+                    <div class='size__wrap'>
+                        <% const size = ['S', 'M', 'L'] %>
+                        <ul class='size__items'>
+                            <% size.forEach(function (item) { %>
+                                <li class='size__item <%if (item == 'M') {%>size__item_active<%}%>'><%=item %></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+                <div class='product__color'>
+                    <span class='product__color-text'>Цвет:</span>
+                    <div class='color__wrap'>
+                        <ul class='color__items'>
+                            <% color.forEach(function (item) { %>
+                            <li class='color__item color__item-<%=item%> <%if (item == 'white') {%>color__item_active<%}%>' data-color='<%=item%>'></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+            <!--END PRODUCT DESCRIPTION-->
+            <!--START PRODUCT ACTIONS-->
+            <div class='product__buy'>
+                <button class='product__buy-btn'>
+                    <span class='product__buy-text'>Купить</span>
+                </button>
+            </div>
+        </form>
+        <div class='product__hold'>
+                <img class='product__hold-img' src='img/icons/heart.png' alt='heart'>
+            <div class='product__hold-wrap'>
+                <a href='#' class='product__hold-link'>
+                    <span class='product__hold-text'>Отложить на потом</span>
+                </a>
+            </div>
+        </div>
+        </div>
+        <!--END PRODUCT ACTIONS-->
+    </div>
+    <!--END PRODUCT-->
+</div>
+<!--END CONTENT-->
+<!--START FOOTER-->
+<footer class='footer container__footer'>
+    <% const service = {
+                title: 'Сервис и поддержка',
+                menus: {
+                    menu1: [
+                        'Как сделать заказ',
+                        'Возврат товара',
+                        'Публичная оферта',
+                        'Доставка'
+                    ],
+                    menu2: [
+                        'Способы оплаты',
+                        'Правила продажи',
+                        'Возврат денежных средств',
+                        'Вопросы и ответы'
+                    ]
+                }
+            }
+    %>
+    <% const about = {
+                title: 'О компании',
+                menus: {
+                    menu1: [
+                        'О нас',
+                        'Контакты',
+                        'Вакансии',
+                        'Партнерам'
+                    ],
+                    menu2: [
+                        'Сертификаты',
+                        'Преимущества',
+                        'Наши скидки'
+                    ]
+                }
+            }
+    %>
+    <div class='container'>
+        <div class='footer__content'>
+           <div class='footer__section footer__section_left'>
+               <div class='footer__content-block footer__menu-block'>
+                   <h4 class='footer__title'><%= service.title %></h4>
+                   <div class='footer__menu-wrapper'>
+                       <% Object.keys(service.menus).map(function(menu) { %>
+                       <ul class='footer__menu'>
+                           <% service.menus[menu].forEach(function (menuItem) { %>
+                           <li class='footer__menu-item'><a class='footer__menu-link' href='#'><%= menuItem %></a></li>
+                           <% }) %>
+                       </ul>
+                       <% }) %>
+                   </div>
+               </div>
+               <div class='footer__content-block footer__menu-block'>
+                   <h4 class='footer__title'><%= about.title %></h4>
+
+                   <div class='footer__menu-wrapper'>
+                       <% Object.keys(about.menus).map(function(menu) { %>
+                       <ul class='footer__menu'>
+                           <% about.menus[menu].forEach(function (menuItem) { %>
+                           <li class='footer__menu-item'><a class='footer__menu-link' href='#'><%= menuItem %></a></li>
+                           <% }) %>
+                       </ul>
+                       <% }) %>
+                   </div>
+               </div>
+           </div>
+           <div class='footer__section footer__section_right'>
+                <div class='footer__content-block'>
+                    <%const features = {
+                        delivery: 'бесплатная доставка от 4000 ₽',
+                        heart: 'пробники в подарок при каждой покупке',
+                        cup: 'акции и подарки за покупку'
+                    }%>
+                    <ul class='footer__features'>
+                        <% Object.keys(features).map(function (key) {%>
+                        <li class='footer__features-item footer__features-item_<%= key%>'><%= features[key]%></li>
+                        <%})%>
+                    </ul>
+                </div>
+                <div class='footer__content-block footer__content-block__social'>
+                    <% const social = ['facebook', 'twitter', 'instagram']
+                    social.forEach(function(item) { %>
+                    <a href='#' class='footer__social-item'>
+                        <img src='img/icons/<%= item%>.svg' class='footer__social-img'>
+                    </a>
+                    <%})%>
+                </div>
+            </div>
+        </div>
+        <div class='footer__cellar'>
+            <p class='footer__cellar-text'>2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.</p>
+            <p class='footer__cellar-text'>Все права защищены. Доставка по всей России!</p>
+        </div>
+    </div>
+</footer>
+<!--END FOOTER-->
+<script src='js/scripts.js'></script>
+</body>
+</html>

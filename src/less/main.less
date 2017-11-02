@@ -1,0 +1,31 @@
+@import (less) '../../node_modules/normalize.css/normalize.css';
+@import (less) '_variables.less';
+@import (less) '_media.less';
+@import (less) '_header.less';
+@import (less) '_content.less';
+@import (less) '_footer.less';
+
+body {
+    background: @white;
+    font-family: @roboto;
+}
+
+.clearfix {
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.container {
+    .clearfix;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    @media @phone-portrait {
+        padding: 0 5px;
+    }
+}
