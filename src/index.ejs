@@ -48,23 +48,23 @@
     <!--END HEADER NAVIGATION-->
 </header>
 <!--END HEADER-->
-<!--START CONTENT-->
-<div class='product container'>
-    <!--START PRODUCT-WAY-->
-    <div class='product__way'>
-        <% const way = ['LISP', 'Одежда', 'Футболки'] %>
-        <ul class='product__items'>
-            <% way.forEach(function(item, index) { %>
-            <li class='product__item'>
-                <a href='#' class='product__link <%if (index == way.length - 1) {%>product__link_active<%}%>'><%= item %></a>
-                <% if (index !== way.length - 1) { %>
+<!--START ARTICLE-->
+<div class='container main-section'>
+    <!--START BREADCRUMBS-->
+    <div class='breadcrumbs'>
+        <% const breadcrumbs = ['LISP', 'Одежда', 'Футболки'] %>
+        <ul class='breadcrumbs__items'>
+            <% breadcrumbs.forEach(function(item, index) { %>
+            <li class='breadcrumbs__item'>
+                <a href='#' class='breadcrumbs__link <%if (index == breadcrumbs.length - 1) {%>breadcrumbs__link_active<%}%>'><%= item %></a>
+                <% if (index !== breadcrumbs.length - 1) { %>
                 /
                 <% } %>
             </li>
             <% }); %>
         </ul>
     </div>
-    <!--END PRODUCT-WAY-->
+    <!--END BREADCRUMBS-->
     <!--START PRODUCT-->
     <div class='product__wrap'>
         <!--START PRODUCT PHOTO-->
@@ -75,8 +75,8 @@
             <% }) %>
         </div>
         <!--END PRODUCT PHOTO-->
-        <!--START PRODUCT DESCRIPTION-->
         <div class='product__info'>
+            <!--START PRODUCT DESCRIPTION-->
             <div class='product__name'>
                 <h2 class='product__name-text'>Футболка Alien technology</h2>
             </div>
@@ -86,50 +86,50 @@
             <div class='product__price'>
                 <span class='product__price-text'>1500₽</span>
             </div>
-            <form action='#' class='product__form'>
-                <div class='product__size'>
-                    <span class='product__size-text'>Размер:</span>
-                    <div class='size__wrap'>
+            <!--END PRODUCT DESCRIPTION-->
+            <!--START PRODUCT ACTIONS-->
+            <form action='#' class='form-section'>
+                <div class='property-section property-section_size'>
+                    <span class='property-section__text'>Размер:</span>
+                    <div class='property-section__wrap'>
                         <% const size = ['S', 'M', 'L'] %>
-                        <ul class='size__items'>
+                        <ul class='property-section__items'>
                             <% size.forEach(function (item) { %>
                                 <li class='size__item <%if (item == 'M') {%>size__item_active<%}%>'><%=item %></li>
                             <% }) %>
                         </ul>
                     </div>
                 </div>
-                <div class='product__color'>
-                    <span class='product__color-text'>Цвет:</span>
-                    <div class='color__wrap'>
-                        <ul class='color__items'>
+                <div class='property-section property-section_color'>
+                    <span class='property-section__text'>Цвет:</span>
+                    <div class='property-section__wrap'>
+                        <ul class='property-section__items'>
                             <% color.forEach(function (item) { %>
                             <li class='color__item color__item-<%=item%> <%if (item == 'white') {%>color__item_active<%}%>' data-color='<%=item%>'></li>
                             <% }) %>
                         </ul>
                     </div>
                 </div>
-            <!--END PRODUCT DESCRIPTION-->
-            <!--START PRODUCT ACTIONS-->
-            <div class='product__buy'>
-                <button class='product__buy-btn'>
-                    <span class='product__buy-text'>Купить</span>
-                </button>
+                <div class='buy-section'>
+                    <button class='buy-section__btn'>
+                        <span class='buy-section__btn-text'>Купить</span>
+                    </button>
+                </div>
+            </form>
+            <div class='hold-section'>
+                <img class='hold-section__img' src='img/icons/heart.png' alt='heart'>
+                <div class='hold-section__wrap'>
+                    <a href='#' class='hold-section__link'>
+                        <span class='hold-section__text'>Отложить на потом</span>
+                    </a>
+                </div>
             </div>
-        </form>
-        <div class='product__hold'>
-                <img class='product__hold-img' src='img/icons/heart.png' alt='heart'>
-            <div class='product__hold-wrap'>
-                <a href='#' class='product__hold-link'>
-                    <span class='product__hold-text'>Отложить на потом</span>
-                </a>
-            </div>
+            <!--END PRODUCT ACTIONS-->
         </div>
-        </div>
-        <!--END PRODUCT ACTIONS-->
     </div>
     <!--END PRODUCT-->
 </div>
-<!--END CONTENT-->
+<!--END ARTICLE-->
 <!--START FOOTER-->
 <footer class='footer container__footer'>
     <% const service = {
