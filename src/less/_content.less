@@ -1,12 +1,25 @@
 @import (less) '_variables.less';
 
 .main-section {
-    margin-bottom: 120px;
+    margin-bottom: 20px;
+
+    @media @desktop_mf {
+        margin-bottom: 120px;
+    }
 }
 
 .breadcrumbs {
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 55px;
+    margin-bottom: 15px;
+
+    @media @tablet_mf {
+        margin-top: 15px;
+    }
+
+    @media @desktop_mf {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
 
     &__items {
         padding: 0;
@@ -33,10 +46,17 @@
 .product {
     &__wrap {
         display: flex;
+        flex-direction: column;
+
+        @media @desktop_mf {
+            flex-direction: row;
+        }
     }
 
     &__photo {
-        width: 50%;
+        @media @desktop_mf {
+            width: 50%;
+        }
     }
 
     &__img {
@@ -49,19 +69,36 @@
     }
 
     &__info {
-        width: 50%;
-        padding-left: 65px;
-        box-sizing: border-box;
+        margin-top: 15px;
+
+        @media @desktop_mf {
+            width: 50%;
+            padding-left: 65px;
+            box-sizing: border-box;
+        }
     }
 
     &__name {
         display: block;
         margin-bottom: 15px;
+        text-align: center;
+
+        @media @desktop_mf {
+            text-align: left;
+        }
     }
 
     &__description,
     &__price {
         margin-bottom: 30px;
+    }
+
+    &__price {
+        text-align: center;
+
+        @media @desktop_mf {
+            text-align: left;
+        }
     }
 
     &__name-text {
@@ -71,11 +108,16 @@
     &__name-text,
     &__price-text {
         font-weight: 700;
-        font-size: 36px;
+        font-size: 20px;
+
+        @media @desktop_mf {
+            font-size: 36px;
+        }
     }
 
     &__price-text {
         color: @red;
+        font-size: 24px;
     }
 }
 
@@ -84,6 +126,11 @@
 
     &__wrap {
         display: flex;
+        justify-content: center;
+
+        @media @desktop_mf {
+            justify-content: space-between;
+        }
     }
 
     &__items {
@@ -103,18 +150,26 @@
 .color__item,
 .size__item {
     text-decoration: none;
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     border: 1px solid @black;
-    margin-right: 10px;
+    margin-right: 20px;
     text-align: center;
     cursor: pointer;
-    font-size: 36px;
+    font-size: 24px;
     box-sizing: border-box;
     color: @black;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media @desktop_mf {
+        width: 65px;
+        height: 65px;
+        font-size: 36px;
+        justify-content: flex-start;
+        margin-right: 10px;
+    }
 
     &_active {
         cursor: default;
@@ -135,19 +190,33 @@
 
 .buy-section {
     margin-bottom: 30px;
+    text-align: center;
+
+    @media @desktop_mf {
+        text-align: left;
+    }
 
     &__btn {
         border: none;
         background: @red;
-        height: 80px;
-        width: 202px;
+        height: 50px;
+        width: 100%;
         cursor: pointer;
         outline: none;
+
+        @media @desktop_mf {
+            height: 80px;
+            width: 202px;
+        }
 
         &-text {
             color: @white;
             font-weight: 400;
-            font-size: 36px;
+            font-size: 24px;
+
+            @media @desktop_mf {
+                font-size: 36;
+            }
         }
     }
 }
@@ -155,6 +224,11 @@
 .hold-section {
     display: flex;
     margin-top: 10px;
+    justify-content: center;
+
+    @media @desktop_mf {
+        justify-content: flex-start;
+    }
 
     &__img {
         height: 25px;

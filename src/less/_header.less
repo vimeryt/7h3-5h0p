@@ -1,8 +1,16 @@
 @import (less) '_variables.less';
 
 .header-wrap {
-    height: 88px;
+    height: 40px;
     display: flex;
+
+    @media @tablet_mf {
+        height: 60px;
+    }
+
+    @media @desktop_mf {
+        height: 88px;
+    }
 }
 
 .header__block {
@@ -11,12 +19,26 @@
 }
 
 .logo-shop {
+    margin-bottom: 9px;
+
+    @media @tablet_mf {
+        margin-bottom: 16px;
+    }
+
+    @media @desktop_mf {
+        margin: auto 0;
+    }
+
     &__link {
         display: inline-block;
     }
 
     &__img {
-        height: 24px;
+        height: 16px;
+
+        @media @desktop_mf {
+            height: 24px;
+        }
     }
 }
 
@@ -28,19 +50,44 @@
     }
 
     &__img {
-        height: 50px;
+        height: 20px;
+
+        @media @tablet_mf {
+            height: 30px;
+        }
+
+        @media @desktop_mf {
+            height: 50px;
+        }
     }
 }
 
 .block-phone {
     text-align: right;
+    margin-bottom: 13px;
+
+    @media @tablet_mf {
+        margin-bottom: 20px;
+    }
+
+    @media @desktop_mf {
+        margin: auto 0;
+    }
 
     &__text {
         text-decoration: none;
         color: @red;
-        font-weight: 700;
-        font-size: 24px;
+        font-size: 11px;
         display: inline-block;
+
+        @media @tablet_mf {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        @media @desktop_mf {
+            font-size: 24px;
+        }
     }
 }
 
@@ -62,7 +109,11 @@
 
     &__item {
         display: inline-block;
-        margin-right: 20px;
+        margin-right: 9px;
+
+        @media @desktop_mf {
+            margin-right: 20px;
+        }
     }
 
     &__link {
@@ -77,12 +128,15 @@
 }
 
 .form-search {
-    float: right;
+
+    @media @tablet_mf {
+        float: right;
+    }
 
     &__input {
         margin: 7px 0;
         height: 36px;
-        width: 278px;
+        width: 100%;
         vertical-align: middle;
         box-sizing: border-box;
         background-color: @white;
@@ -92,5 +146,9 @@
         background-size: 15px;
         border: 1px solid @darkbeige;
         padding: 0 30px 0 10px;
+
+        @media @desktop_mf {
+            width: 278px;
+        }
     }
 }
