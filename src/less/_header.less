@@ -3,6 +3,8 @@
 .header-wrap {
     height: 40px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     @media @tablet_mf {
         height: 60px;
@@ -78,11 +80,11 @@
         text-decoration: none;
         color: @red;
         font-size: 11px;
+        font-weight: 700;
         display: inline-block;
 
         @media @tablet_mf {
             font-size: 16px;
-            font-weight: 700;
         }
 
         @media @desktop_mf {
@@ -92,7 +94,6 @@
 }
 
 .navigation-wrap {
-    height: 50px;
     background-color: @beige;
     border-top: 1px solid @darkbeige;
     border-bottom: 1px solid @darkbeige;
