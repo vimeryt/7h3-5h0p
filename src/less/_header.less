@@ -3,18 +3,6 @@
 .header-wrap {
     height: 88px;
     display: flex;
-
-    @media @tablet {
-        height: 70px;
-    }
-
-    @media @phone-landscape {
-        height: 50px;
-    }
-
-    @media @phone-portrait {
-        height: 30px;
-    }
 }
 
 .header__block {
@@ -29,27 +17,11 @@
 
     &__img {
         height: 24px;
-
-        @media @phone-landscape {
-            height: 20px;
-        }
-
-        @media @phone-portrait {
-            height: 16px;
-        }
-
-        @media @phone {
-            height: 12px;
-        }
     }
 }
 
 .logo-oggetto {
     text-align: center;
-
-    @media @phone-portrait {
-        margin-top: 5px;
-    }
 
     &__link {
         display: inline-block;
@@ -57,14 +29,6 @@
 
     &__img {
         height: 50px;
-
-        @media @phone-landscape {
-            height: 35px;
-        }
-
-        @media @phone-portrait {
-            height: 20px;
-        }
     }
 }
 
@@ -77,22 +41,6 @@
         font-weight: 700;
         font-size: 24px;
         display: inline-block;
-
-        @media @tablet {
-            font-size: 20px;
-        }
-
-        @media @phone-landscape {
-            font-size: 14px;
-        }
-
-        @media @phone-portrait {
-            font-size: 12px;
-        }
-
-        @media @phone {
-            font-size: 11px;
-        }
     }
 }
 
@@ -101,14 +49,6 @@
     background-color: @beige;
     border-top: 1px solid @darkbeige;
     border-bottom: 1px solid @darkbeige;
-
-    @media @phone-landscape {
-        height: 40px;
-    }
-
-    @media @phone-portrait {
-        height: 25px;
-    }
 }
 
 .navigation {
@@ -118,33 +58,11 @@
         margin: 16px 0;
         padding: 0;
         list-style: none;
-
-        @media @phone-landscape {
-            margin: 11px 0;
-        }
-
-        @media @phone-portrait {
-            margin: 2px 0;
-        }
     }
 
     &__item {
         display: inline-block;
         margin-right: 20px;
-
-        @media @phone-landscape {
-            margin-right: 8px;
-            font-size: 12px;
-        }
-
-        @media @phone-portrait {
-            font-size: 11px;
-            margin-right: 5px;
-        }
-
-        @media @phone {
-            font-size: 8px;
-        }
     }
 
     &__link {
@@ -174,28 +92,5 @@
         background-size: 15px;
         border: 1px solid @darkbeige;
         padding: 0 30px 0 10px;
-
-        @media @tablet {
-            width: 215px;
-        }
-
-        @media @phone-landscape {
-            margin: 5px 0;
-            height: 30px;
-            width: 150px;
-        }
-        @media @phone-portrait {
-            margin: 3px 0;
-            height: 20px;
-            width: 125px;
-            background-size: 12px;
-        }
-
-        @media @phone {
-            margin: 4px 0;
-            height: 17px;
-            width: 120px;
-            background-size: 10px;
-        }
     }
 }
