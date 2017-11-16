@@ -56,11 +56,6 @@
 
     &__img {
         width: 100%;
-        display: none;
-
-        &_active {
-            display: block;
-        }
     }
 
     &__info {
@@ -173,11 +168,11 @@
 }
 
 .color__item {
-    &-yellow {
+    &[data-value='yellow'] {
         background: @yellowshirt;
     }
 
-    &-green {
+    &[data-value='green'] {
         background: @greenshirt;
     }
 }

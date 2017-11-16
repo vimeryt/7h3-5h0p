@@ -1,42 +1,33 @@
-(function () {
-    const colors = document.getElementsByClassName('color__item');
-    const sizes = document.getElementsByClassName('size__item');
-    const selectors = [...colors, ...sizes];
+import PropertySelector from './property-selector.js';
 
-    for (let i = 0; i < selectors.length; i++) {
-        const selector = selectors[i];
+const Dispatcher = document.getElementById('doc');
 
-        selector.addEventListener('click',function(event) {
-            event.preventDefault();
+new PropertySelector(document.getElementById('colorList'));
+new PropertySelector(document.getElementById('sizeList'));
 
-            const isColorSelector = !!selector.dataset.color;
+Dispatcher.addEventListener('property-selected', ev => {
+    const data = ev.detail;
 
-
-
-            for(let i = 0; i < selectors.length; i++) {
-                if (isColorSelector) {
-                    if (selectors[i].classList.contains('color__item_active')) {
-                        selectors[i].classList.remove('color__item_active');
-                    }
-                    event.target.className += ' color__item_active';
-                } else {
-                    if (selectors[i].classList.contains('size__item_active')) {
-                        selectors[i].classList.remove('size__item_active');
-                    }
-                    event.target.className += ' size__item_active';
-                }
-
-            }
-
-
-            if (isColorSelector) {
-                const images = document.getElementsByClassName('product__img');
-                for (let i = 0; i < images.length; i++) {
-                    images[i].style.display = 'none';
-                }
-                const img_id = event.target.getAttribute('data-color');
-                document.getElementById(img_id).style.display = 'block';
-            }
-        });
+    if (data.type === 'color') {
+        toggleClass(data.value, data.type);
+        changePicture(data.value);
     }
-})();
+
+    if (data.type === 'size') {
+        toggleClass(data.value, data.type);
+    }
+});
+
+function toggleClass(value, type) {
+    let allItems = document.querySelectorAll(`[data-type='${type}']`);
+    let target = document.querySelectorAll(`[data-value='${value}']`)[0];
+
+    allItems.forEach(item => {
+        item.classList = `${type}__item`;
+    });
+    target.classList = `${target.className} ${type}__item_active`;
+}
+
+function changePicture(color) {
+    document.getElementById('productPicture').src = 'img/tshirts/tshirt_' + color + '.jpg';
+}

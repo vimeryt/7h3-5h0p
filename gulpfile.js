@@ -50,8 +50,8 @@ gulp.task('js', () => {
 
 gulp.task('html', () => {
     gulp.src('src/index.ejs')
-    .pipe(ejs().on('error', gutil.log))
-    .pipe(rename('index.html'))
+        .pipe(ejs().on('error', gutil.log))
+        .pipe(rename('index.html'))
         .pipe(gulp.dest('./dist'));
 });
 
