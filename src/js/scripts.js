@@ -1,41 +1,33 @@
-// Your code here...
-(function () {
-    const controls = document.getElementsByClassName('color__item');
-    for (let i = 0; i < controls.length; i++) {
-        const control = controls[i];
-        control.addEventListener('click',function(event) {
-            event.preventDefault();
+import PropertySelector from './property-selector.js';
 
-            for(let i = 0; i < controls.length; i++) {
-                if (controls[i].classList.contains('color__item_active')) {
-                    controls[i].classList.remove('color__item_active');
-                }
-            }
-            event.target.className += ' color__item_active';
+const Dispatcher = document.getElementById('doc');
 
-            const images = document.getElementsByClassName('product__img');
-            for (let i = 0; i < images.length; i++) {
-                images[i].style.display = 'none';
-            }
-            const img_id = event.target.getAttribute('data-color');
-            document.getElementById(img_id).style.display = 'block';
-        });
+new PropertySelector(document.getElementById('colorList'));
+new PropertySelector(document.getElementById('sizeList'));
+
+Dispatcher.addEventListener('property-selected', ev => {
+    const data = ev.detail;
+
+    if (data.type === 'color') {
+        toggleClass(data.value, data.type);
+        changePicture(data.value);
     }
-})();
 
-(function () {
-    const controls = document.getElementsByClassName('size__item');
-    for (let i = 0; i < controls.length; i++) {
-        const control = controls[i];
-        control.addEventListener('click',function(event) {
-            event.preventDefault();
-
-            for (let i = 0; i < controls.length; i++) {
-                if (controls[i].classList.contains('size__item_active')) {
-                    controls[i].classList.remove('size__item_active');
-                }
-            }
-            event.target.className += ' size__item_active';
-        });
+    if (data.type === 'size') {
+        toggleClass(data.value, data.type);
     }
-})();
+});
+
+function toggleClass(value, type) {
+    let allItems = document.querySelectorAll(`[data-type='${type}']`);
+    let target = document.querySelectorAll(`[data-value='${value}']`)[0];
+
+    allItems.forEach(item => {
+        item.classList = `${type}__item`;
+    });
+    target.classList = `${target.className} ${type}__item_active`;
+}
+
+function changePicture(color) {
+    document.getElementById('productPicture').src = 'img/tshirts/tshirt_' + color + '.jpg';
+}
